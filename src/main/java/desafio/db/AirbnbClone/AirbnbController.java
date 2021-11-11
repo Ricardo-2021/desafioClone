@@ -32,42 +32,7 @@ public class AirbnbController {
         return new ResponseEntity<List<Airbnb>>(air, HttpStatus.OK);
     }
 
-	/*@RequestMapping(value = "{numeroCep}", method = RequestMethod.GET)
-	public ResponseEntity<Cep> findByNumeroCep(@PathVariable("numeroCep") String numeroCep) {
-		Cep cep = this.cepRepository.findByNumeroCep(numeroCep);
-		if (cep == null) {
-			return new ResponseEntity<Cep>(cep, HttpStatus.NOT_FOUND);
-		}
-		return new ResponseEntity<Cep>(cep, HttpStatus.OK);
-	}
-
-	@RequestMapping(value = "/cidades/{cidade}", method = RequestMethod.GET)
-	public ResponseEntity<List<Cep>> findByCidade(@PathVariable("cidade") String cidade) {
-		List<Cep> cep = this.cepRepository.findByCidade(cidade);
-		if (cep.isEmpty()) {
-			return new ResponseEntity<List<Cep>>(cep, HttpStatus.NOT_FOUND);
-		}
-		return new ResponseEntity<List<Cep>>(cep, HttpStatus.OK);
-	}
-
-	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Cep> save(@RequestBody Cep cep, BindingResult bindingResult) {
-		cepRepository.save(cep);
-		if(bindingResult.hasErrors() || (cep == null)){
-			return new ResponseEntity<Cep>(cep, HttpStatus.BAD_REQUEST);
-		}
-		return new ResponseEntity<Cep>(cep, HttpStatus.CREATED);
-	}
-
-	@RequestMapping(value = "/id/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<Cep> deleteById(@PathVariable("id") Integer id) {
-		Cep cepId = this.cepRepository.findById(id);
-		cepRepository.delete(cepId);
-		if (cepId == null) {
-			return new ResponseEntity<Cep>(cepId, HttpStatus.NOT_FOUND);
-		}
-		return new ResponseEntity<Cep>(cepId, HttpStatus.OK);
-	}*/
+	
 }
 
 
