@@ -1,5 +1,7 @@
 package desafio.db.AirbnbClone;
 
+import desafio.db.AirbnbClone.Model.Airbnb;
+import desafio.db.AirbnbClone.Repository.AirbnbRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,7 +26,12 @@ public class AirbnbCloneApplication {
 			repository.save(new Airbnb(5 , "Apt com dois dormitórios e com sacada", "Diaria de R$ 100,00 contato (51)973258745","Av. Novo hamburgo, 552, disponivel janeiro e fevereiro de 2022"));
 			repository.save(new Airbnb(6 , "Casa com dois dormitórios, com sacada, garagem para dois carros", "Diaria de R$ 120,00 contato (51)965852321","Av. Assis Brasil, 2525, disponivel janeiro e fevereiro de 2022"));
 
-		};
+		}
+
+		;
+
+
+
 	}
 
 }
