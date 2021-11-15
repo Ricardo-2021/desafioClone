@@ -1,4 +1,6 @@
 package desafio.db.AirbnbClone.Model;
+import com.sun.istack.NotNull;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,25 +9,27 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Cep")
+@Table(name="airbnb")
 public class Airbnb {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	@Column(nullable = false)
+	@NotNull
 	private String imovel;
-	@Column(nullable = false)
+	@Column(name="valor_contato")
+	@NotNull
 	private String valorContato;
-	@Column(nullable = false)
+	@Column(name="endereco_disponibilidade")
+	@NotNull
 	private String enderecoDisponibilidade;
 
 
 	public Airbnb() {
 	}
 
-	public Airbnb(Integer id, String imovel, String valorContato, String enderecoDisponibilidade) {
-		super();
-		this.id = id;
+	public Airbnb(/*Integer id,*/ String imovel, String valorContato, String enderecoDisponibilidade) {
+		//super();
+		//this.id = id;
 		this.imovel = imovel;
 		this.valorContato = valorContato;
 		this.enderecoDisponibilidade = enderecoDisponibilidade;
@@ -65,7 +69,7 @@ public class Airbnb {
 
 	@Override
 	public String toString() {
-		return "Cep [id=" + id + ", Imovel=" + imovel + ", Contato e valor" + valorContato + ", Endereço e disponibilidade" + enderecoDisponibilidade + "]";
+		return "Promções [id=" + id + ", Imovel=" + imovel + ", Contato e valor" + valorContato + ", Endereço e disponibilidade" + enderecoDisponibilidade + "]";
 
 	}
 	
